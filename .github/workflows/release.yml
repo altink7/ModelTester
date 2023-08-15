@@ -29,11 +29,9 @@ jobs:
 
       - name: Version Bump and Changelog Update
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           npx semantic-release
-          # Make sure to install and configure semantic-release in your project
-          # For more details: https://semantic-release.gitbook.io/semantic-release/
 
       - name: Create Release Tag
         run: |
