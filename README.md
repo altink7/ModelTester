@@ -22,7 +22,7 @@ Usage
 
     Create a model class that you want to test. For example, let's consider a DummyClass:
 
-java
+```java
 
 public class DummyClass {
     private int id;
@@ -31,9 +31,11 @@ public class DummyClass {
     // ... getters, setters, equals, hashCode, and toString methods ...
 }
 
+```
+
     Write unit tests for your model class using the ModelTester framework:
 
-java
+```java
 
 import at.altin.modeltester.ModelTester;
 import at.altin.modeltester.tester.standard.EqualsTester;
@@ -58,6 +60,7 @@ public class DummyClassTest {
         }
     }
 }
+```
 
     Run your unit tests using your preferred testing framework (e.g., JUnit, TestNG).
 
