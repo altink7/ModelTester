@@ -1,7 +1,7 @@
 package at.altin.modeltester.tester.base;
 
 /**
- * This annotation interface defines a tester for classes and methods functionality.
+ * This interface defines a tester for classes and methods functionality.
  * Test methods annotated with this should take an instance parameter for testing.
  *
  * @author altin
