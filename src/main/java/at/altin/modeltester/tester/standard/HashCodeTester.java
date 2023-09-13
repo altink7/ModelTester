@@ -10,10 +10,11 @@ import java.lang.reflect.Method;
  * and it handles both enums and regular classes.
  * If the hashCode() method is not defined in the class, it is not tested.
  * Note: Enums usually have predefined hashCode() implementations.
- * @see EqualsTester
+ *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @see EqualsTester
+ * @since 12.08.2023
  */
 public class HashCodeTester extends AbstractClassTester implements Tester {
 

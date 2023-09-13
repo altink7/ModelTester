@@ -9,9 +9,10 @@ import java.lang.reflect.Method;
  * This class tests whether the copy() method of a given class creates a deep copy
  * that follows the contract rules of being a separate instance with the same properties.
  * If the copy() method is not defined in the class, it is not tested.
+ *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @since 12.08.2023
  */
 public class CopyTester extends AbstractClassTester implements Tester {
 

@@ -18,8 +18,8 @@ import java.lang.reflect.Method;
  * </p>
  *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @since 12.08.2023
  */
 public class ToStringTester extends AbstractClassTester implements Tester {
 

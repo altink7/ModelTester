@@ -4,9 +4,10 @@ import java.lang.reflect.Method;
 
 /**
  * Holds Basic Implementing for all Testers
+ *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @since 12.08.2023
  */
 public abstract class AbstractClassTester {
     /**
@@ -30,7 +31,7 @@ public abstract class AbstractClassTester {
     /**
      * Retrieves the given method of the given class.
      *
-     * @param clazz The class to retrieve the toString() method from.
+     * @param clazz  The class to retrieve the toString() method from.
      * @param method method to be tested, for example: toString
      * @return The given method or null if not found.
      */
@@ -40,5 +41,29 @@ public abstract class AbstractClassTester {
         } catch (NoSuchMethodException e) {
             return null;
         }
+    }
+
+    public static Class getClass(String className) {
+        try {
+            return Class.forName(className);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Error creating instance of class " + className, e);
+        }
+    }
+
+    /**
+     * check if the given class implement the given interface
+     * @param clazz class to be tested
+     * @param interfaceName interface to be tested ( implemnted by class)
+     */
+
+    public static boolean isInstanceOfInterface( Class clazz, Class interfaceName){
+        Class[] interfaces = clazz.getInterfaces();
+        for (Class interfaceClass : interfaces) {
+            if (interfaceClass.getName().equals(interfaceName.getName())) {
+                return true;
+            }
+        }
+        return false;
     }
 }

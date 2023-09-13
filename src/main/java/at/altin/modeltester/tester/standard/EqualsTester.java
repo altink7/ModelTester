@@ -10,9 +10,10 @@ import java.lang.reflect.Method;
  * of reflexivity, symmetry, and consistency.
  * If the equals() method is not defined in the class, it is not tested.
  * Note: Enums usually have predefined equals() implementations.
+ *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @since 12.08.2023
  */
 public class EqualsTester extends AbstractClassTester implements Tester {
 

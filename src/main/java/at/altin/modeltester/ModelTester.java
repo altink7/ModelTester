@@ -27,14 +27,17 @@ import java.util.function.Supplier;
  *                // Custom instance creation logic
  *            })
  *            .test();
- * }
+ * }****
  * </pre>
  *
  * @author altin
- * @since 12.08.2023
  * @version 1.0
+ * @since 12.08.2023
  */
 public class ModelTester extends AbstractClassTester {
+    /**
+     * This constant contains the standard testers that are run by default.
+     */
     public static final List<Tester> STANDARD_TESTER;
 
     static {
@@ -55,7 +58,9 @@ public class ModelTester extends AbstractClassTester {
 
     /**
      * The class to be tested
+     *
      * @param clazz class
+     * @return the model tester
      */
     public static ModelTester forClass(Class<?> clazz) {
         return new ModelTester(clazz);
@@ -63,7 +68,9 @@ public class ModelTester extends AbstractClassTester {
 
     /**
      * exclude Standard Testers
+     *
      * @param testerClass tester to be excluded
+     * @return the model tester
      */
     public ModelTester exclude(Class<? extends Tester> testerClass) {
         excludedTesters.add(testerClass);
@@ -72,7 +79,9 @@ public class ModelTester extends AbstractClassTester {
 
     /**
      * Add a custom tester, or implement directly a custom tester method
+     *
      * @param tester tester to be added
+     * @return the model tester
      */
     public ModelTester customTester(Tester tester) {
         testers.add(tester);
@@ -81,7 +90,9 @@ public class ModelTester extends AbstractClassTester {
 
     /**
      * give a specific supplier instead of using the default one
+     *
      * @param supplier class supplier
+     * @return the model tester
      */
     public ModelTester instanceSupplier(Supplier<Object> supplier) {
         instanceSupplier = supplier;
@@ -90,12 +101,17 @@ public class ModelTester extends AbstractClassTester {
 
     /**
      * Removes standard Testers for this test run.
+     *
+     * @return the model tester
      */
     public ModelTester excludeStandardTesters() {
         testers.removeAll(STANDARD_TESTER);
         return this;
     }
 
+    /**
+     * Test.
+     */
     public void test() {
         Object instance = instanceSupplier.get();
 

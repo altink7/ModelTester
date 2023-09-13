@@ -13,9 +13,10 @@ import java.util.HashSet;
 /**
  * Utility class to test getters and setters of a class.
  * use instanceSupplier from ModelTester if you do not have default Constructor
- * @author  altin
- * @since   12.08.2023
+ *
+ * @author altin
  * @version 1.0
+ * @since 12.08.2023
  */
 public class GetterSetterTester extends AbstractClassTester implements Tester {
 
