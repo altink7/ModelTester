@@ -39,9 +39,6 @@ public class DummyClass {
 
 import at.altin.modeltester.ModelTester;
 import at.altin.modeltester.tester.standard.EqualsTester;
-import at.altin.modeltester.tester.standard.GetterSetterTester;
-import at.altin.modeltester.tester.standard.HashCodeTester;
-import at.altin.modeltester.tester.standard.ToStringTester;
 
 public class DummyClassTest {
 
