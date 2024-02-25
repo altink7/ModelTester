@@ -5,8 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>at.altin.modeltester</groupId>
-  <artifactId>ModelTester</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <artifactId>modeltester</artifactId>
+  <version>1.0.0</version>
 
   <name>ModelTester</name>
   <url>https://altink7.github.io/</url>
@@ -16,6 +16,14 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/altink7/modeltester</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
