@@ -12,9 +12,9 @@ Include the ModelTester framework in your project by adding it as a dependency i
 
 ```xml
 <dependency>
-    <groupId>at.altin</groupId>
-    <artifactId>modeltester</artifactId>
-    <version>1.0.0</version>
+  <groupId>at.altin.modeltester</groupId>
+  <artifactId>modeltester</artifactId>
+  <version>1.0.0</version>
 </dependency>
 ```
 
