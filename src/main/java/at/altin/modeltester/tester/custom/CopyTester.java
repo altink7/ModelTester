@@ -1,6 +1,7 @@
 package at.altin.modeltester.tester.custom;
 
 import at.altin.modeltester.tester.base.*;
+import at.altin.utils.exception.ModelTesterRuntimeException;
 
 import java.lang.reflect.Method;
 
@@ -36,7 +37,7 @@ public class CopyTester extends AbstractClassTester implements Tester {
                 throw new AssertionError("Copy method did not create an equivalent copy for class " + clazz.getSimpleName());
             }
         } catch (Exception e) {
-            throw new RuntimeException("Error testing copy method for class " + clazz.getSimpleName(), e);
+            throw new ModelTesterRuntimeException("Error testing copy method for class " + clazz.getSimpleName(), e);
         }
     }
 

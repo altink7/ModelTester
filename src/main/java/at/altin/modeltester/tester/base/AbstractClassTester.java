@@ -1,5 +1,7 @@
 package at.altin.modeltester.tester.base;
 
+import at.altin.utils.exception.ModelTesterRuntimeException;
+
 import java.lang.reflect.Method;
 
 /**
@@ -25,7 +27,7 @@ public abstract class AbstractClassTester {
                 return clazz.getDeclaredConstructor().newInstance();
             }
         } catch (ReflectiveOperationException e) {
-            throw new RuntimeException("Error creating instance of class " + clazz.getSimpleName(), e);
+            throw new ModelTesterRuntimeException("Error creating instance of class " + clazz.getSimpleName(), e);
         }
     }
 
@@ -48,7 +50,7 @@ public abstract class AbstractClassTester {
         try {
             return Class.forName(className);
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Error creating instance of class " + className, e);
+            throw new ModelTesterRuntimeException("Error creating instance of class " + className, e);
         }
     }
 

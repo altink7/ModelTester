@@ -2,6 +2,7 @@ package at.altin.modeltester.tester.custom;
 
 
 import at.altin.modeltester.tester.base.Tester;
+import at.altin.utils.exception.ModelTesterRuntimeException;
 
 import java.lang.reflect.Constructor;
 import java.util.Arrays;
@@ -34,7 +35,7 @@ public class ConstructorTester implements Tester {
                 }
                 constructor.newInstance(parameters);
             } catch (Exception e) {
-                throw new RuntimeException("Error testing constructor for class " + clazz.getSimpleName(), e);
+                throw new ModelTesterRuntimeException("Error testing constructor for class " + clazz.getSimpleName(), e);
             }
         });
     }

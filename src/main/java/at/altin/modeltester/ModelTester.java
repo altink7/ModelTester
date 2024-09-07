@@ -5,7 +5,7 @@ import at.altin.modeltester.tester.standard.EqualsTester;
 import at.altin.modeltester.tester.standard.GetterSetterTester;
 import at.altin.modeltester.tester.standard.HashCodeTester;
 import at.altin.modeltester.tester.standard.ToStringTester;
-import lombok.extern.slf4j.Slf4j;
+import at.altin.utils.exception.ModelTesterRuntimeException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -120,7 +120,7 @@ public class ModelTester extends AbstractClassTester {
                         Tester testerInstance = testerClass.getDeclaredConstructor().newInstance();
                         testerInstance.test(instance);
                     } catch (ReflectiveOperationException e) {
-                        throw new RuntimeException("Error creating instance of tester class " + testerClass.getSimpleName(), e);
+                        throw new ModelTesterRuntimeException("Error creating instance of tester class " + testerClass.getSimpleName(), e);
                     }
                 });
     }
@@ -137,7 +137,7 @@ public class ModelTester extends AbstractClassTester {
             }
             return clazz.getDeclaredConstructor().newInstance();
         } catch (ReflectiveOperationException e) {
-            throw new RuntimeException("Error creating instance of class " + clazz.getSimpleName(), e);
+            throw new ModelTesterRuntimeException("Error creating instance of class " + clazz.getSimpleName(), e);
         }
     }
 }
