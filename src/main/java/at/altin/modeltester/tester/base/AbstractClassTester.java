@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
  * @since 12.08.2023
  */
 public abstract class AbstractClassTester {
+
     /**
      * Creates an instance of the given class.
      *
@@ -43,7 +44,7 @@ public abstract class AbstractClassTester {
         }
     }
 
-    public static Class getClass(String className) {
+    public static Class<?> getClass(String className) {
         try {
             return Class.forName(className);
         } catch (ClassNotFoundException e) {
@@ -57,10 +58,10 @@ public abstract class AbstractClassTester {
      * @param interfaceName interface to be tested ( implemnted by class)
      */
 
-    public static boolean isInstanceOfInterface( Class clazz, Class interfaceName){
-        Class[] interfaces = clazz.getInterfaces();
-        for (Class interfaceClass : interfaces) {
-            if (interfaceClass.getName().equals(interfaceName.getName())) {
+    public static boolean isInstanceOfInterface(Class<?> clazz, Class<?> interfaceName){
+        Class<?>[] interfaces = clazz.getInterfaces();
+        for (Class<?> interfaceClass : interfaces) {
+            if (interfaceClass.equals(interfaceName)) {
                 return true;
             }
         }
