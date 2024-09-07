@@ -17,16 +17,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Payment implements Serializable {
     private Long id;
-
     private PurchaseOrder orderPosition;
-
     private String paymentMethod;
-
     private String paymentStatus;
-
     private Double amount;
-
     private String transactionId;
-
     private String description;
 }

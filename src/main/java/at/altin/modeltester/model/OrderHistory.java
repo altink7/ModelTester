@@ -17,10 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class OrderHistory implements Serializable {
     private Long id;
-
     private Customer customer;
-
     private PurchaseOrder orderPosition;
-
 }
 

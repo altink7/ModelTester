@@ -1,5 +1,7 @@
 package at.altin.methodtester;
 
+import at.altin.utils.exception.MethodTesterRuntimeException;
+
 import java.lang.reflect.Method;
 import java.util.function.Supplier;
 
@@ -45,9 +47,9 @@ public class MethodTester<T> {
         try {
             Method method = clazz.getDeclaredMethod(methodName);
             method.setAccessible(true);
-            Object result = method.invoke(instance, args);
+            method.invoke(instance, args);
         } catch (Exception e) {
-            throw new RuntimeException("Error testing method " + methodName, e);
+            throw new MethodTesterRuntimeException("Error testing method " + methodName, e);
         }
     }
 }

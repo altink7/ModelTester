@@ -16,14 +16,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Product implements Serializable {
     private Long id;
-
     private String brand;
-
     private String model;
-
     private String description;
-
     private String imageUrl;
-
     private String price;
 }

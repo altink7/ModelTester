@@ -1,7 +1,6 @@
 package at.altin.modeltester.model;
 
 import at.altin.modeltester.ModelTester;
-import at.altin.modeltester.model.*;
 import at.altin.modeltester.tester.custom.ConstructorTester;
 import at.altin.modeltester.tester.custom.CopyTester;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,7 +18,7 @@ import java.util.stream.Stream;
  * </p>
  *
  */
-class ModelUnitTest {
+class ModelUnitTestModel {
 
     @ParameterizedTest
     @MethodSource("classProvider")
@@ -42,7 +41,7 @@ class ModelUnitTest {
                 PurchaseOrder.class,
                 Review.class,
                 WishList.class,
-                Test.class
+                TestModel.class
         );
     }
 }

@@ -16,8 +16,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class WishList implements Serializable {
     private Long id;
-
     private Customer customer;
-
     private Product product;
 }

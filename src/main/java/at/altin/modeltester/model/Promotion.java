@@ -17,17 +17,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Promotion implements Serializable {
-
     private Long id;
-
     private String code;
-
     private String description;
-
     private Double discountAmount;
-
     private LocalDate startDate;
-
     private LocalDate endDate;
-
 }

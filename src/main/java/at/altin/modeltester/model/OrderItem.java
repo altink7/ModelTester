@@ -17,15 +17,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderItem implements Serializable {
-
     private Long id;
-
     private PurchaseOrder purchaseOrder;
-
     private Product product;
-
     private Integer quantity;
-
     private Double price;
-
 }

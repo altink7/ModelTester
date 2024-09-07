@@ -17,13 +17,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Review implements Serializable {
     private Long id;
-
     private Product product;
-
     private Customer customer;
-
     private Integer rating;
-
     private String text;
-
 }

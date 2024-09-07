@@ -19,16 +19,10 @@ import java.util.List;
 @NoArgsConstructor
 public class PurchaseOrder implements Serializable {
     private Long id;
-
     private Customer customer;
-
     private List<OrderItem> orderItems;
-
     private String paymentMethod;
-
     private String paymentStatus;
-
     private Double totalAmount;
-
     private String orderType;
 }

@@ -18,22 +18,14 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address implements Serializable {
-
     private static final long serialVersionUID = 7876904359463936168L;
     private Long id;
-
     private Customer customer;
-
-    private String type; // shipping or billing
-
+    private String type;
     private String street;
-
     private String city;
-
     private String state;
-
     private String country;
-
     private String zipCode;
 
     @Override
